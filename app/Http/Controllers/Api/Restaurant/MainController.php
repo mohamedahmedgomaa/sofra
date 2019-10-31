@@ -119,12 +119,12 @@ class MainController extends Controller
         }
 
         $offer = Offer::create($request->all());
-        if ( $request->hasFile('image')  ) {
+        if ($request->hasFile('image')) {
             $image = $request->image;
             $image_new_name = time() . $image->getClientOriginalName();
             $image->move('uploads/post', $image_new_name);
 
-            $offer->image = 'uploads/post/'.$image_new_name;
+            $offer->image = 'uploads/post/' . $image_new_name;
             $offer->save();
         }
 
@@ -149,12 +149,12 @@ class MainController extends Controller
         $offer = $request->user()->offers()->find($request->offer_id);
         if ($offer) {
             $offer->update($request->all());
-            if ( $request->hasFile('image')  ) {
+            if ($request->hasFile('image')) {
                 $image = $request->image;
                 $image_new_name = time() . $image->getClientOriginalName();
                 $image->move('uploads/post', $image_new_name);
 
-                $offer->image = 'uploads/post/'.$image_new_name;
+                $offer->image = 'uploads/post/' . $image_new_name;
                 $offer->save();
             }
         }
@@ -192,9 +192,9 @@ class MainController extends Controller
         if ($validator->fails()) {
             return responseJson(0, $validator->errors()->first(), $validator->errors());
         }
-        $product = $request->user()->products()->find($request->id)->load('restaurant');
+        $product = $request->user()->products()->find($request->id);
         if ($product) {
-            return responseJson(1, 'تمت العمليه بنجاح', $product);
+            return responseJson(1, 'تمت العمليه بنجاح', $product->load('restaurant'));
         }
         return responseJson(0, 'فشلت العمليه');
     }
@@ -217,14 +217,14 @@ class MainController extends Controller
             return responseJson(0, 'سعر العرض اكبر من او يساوى سعر المنيج');
         }
         $product = Product::create($request->all());
-        if ( $request->hasFile('image')  ) {
-        $image = $request->image;
-        $image_new_name = time() . $image->getClientOriginalName();
-        $image->move('uploads/post', $image_new_name);
+        if ($request->hasFile('image')) {
+            $image = $request->image;
+            $image_new_name = time() . $image->getClientOriginalName();
+            $image->move('uploads/post', $image_new_name);
 
-        $product->image = 'uploads/post/'.$image_new_name;
-        $product->save();
-    }
+            $product->image = 'uploads/post/' . $image_new_name;
+            $product->save();
+        }
         $product->restaurant_id = $request->user()->id;
         $product->save();
         return responseJson(1, 'تمت العمليه بنجاح', $product);
@@ -245,12 +245,12 @@ class MainController extends Controller
         $product = $request->user()->products()->find($request->product_id);
         if ($product) {
             $product->update($request->all());
-            if ( $request->hasFile('image')  ) {
+            if ($request->hasFile('image')) {
                 $image = $request->image;
                 $image_new_name = time() . $image->getClientOriginalName();
                 $image->move('uploads/post', $image_new_name);
 
-                $product->image = 'uploads/post/'.$image_new_name;
+                $product->image = 'uploads/post/' . $image_new_name;
                 $product->save();
             }
             return responseJson(1, 'تمت التعديل بنجاح', ['product' => $product]);
@@ -286,7 +286,7 @@ class MainController extends Controller
 
         Token::where('token', $request->token)->delete();
         $request->user()->tokens()->create($request->all());
-        return responseJson(1,'تمت العمليه بنجاح');
+        return responseJson(1, 'تمت العمليه بنجاح');
     }
 
     public function removeTokenRestaurant(Request $request)
@@ -300,6 +300,6 @@ class MainController extends Controller
 
         Token::where('token', $request->token)->delete();
 
-        return responseJson(1,'تم الحذف بنجاح');
+        return responseJson(1, 'تم الحذف بنجاح');
     }
 }

@@ -23,7 +23,7 @@ class CreateRestaurantsTable extends Migration {
 			$table->integer('whats_app');
 			$table->integer('restaurant_phone');
 			$table->integer('pin_code')->nullable();
-            $table->boolean('activated')->default(1);
+            $table->boolean('activated')->default(0);
 		});
 	}
 

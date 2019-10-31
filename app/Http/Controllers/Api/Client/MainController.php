@@ -82,12 +82,11 @@ class MainController extends Controller
         }
 
         $restaurant = Restaurant::where('id', $request->restaurant_id)->get();
-        $products = Product::where('restaurant_id', $request->restaurant_id)->get();
-
-        return responseJson(1, 'تمت الاضافه بنجاح', [
-            'restaurant' => $restaurant,
-            'restaurant products' => $products,
-        ]);
+        $products = Product::where('restaurant_id', $request->restaurant_id)->paginate();
+        if ($products->count()) {
+            return responseJson(1, 'تمت  بنجاح',[$restaurant,$products]);
+        }
+        return responseJson(0, 'لا توجد بيانات');
     }
 
     public function offerProducts(Request $request)
@@ -98,7 +97,7 @@ class MainController extends Controller
         if ($validator->fails()) {
             return responseJson(0, $validator->errors()->first(), $validator->errors());
         }
-        $product = Product::where('restaurant_id' , $request->restaurant_id)->where('offer', '!=', null)->get();
+        $product = Product::where('restaurant_id', $request->restaurant_id)->where('offer', '!=', null)->get();
         if (!empty($product)) {
             return responseJson(1, 'تمت العمليه بنجاح', $product);
         }
@@ -175,7 +174,7 @@ class MainController extends Controller
 
         Token::where('token', $request->token)->delete();
         $request->user()->tokens()->create($request->all());
-        return responseJson(1,'تمت العمليه بنجاح');
+        return responseJson(1, 'تمت العمليه بنجاح');
     }
 
     public function removeTokenClient(Request $request)
@@ -189,6 +188,6 @@ class MainController extends Controller
 
         Token::where('token', $request->token)->delete();
 
-        return responseJson(1,'تم الحذف بنجاح');
+        return responseJson(1, 'تم الحذف بنجاح');
     }
 }

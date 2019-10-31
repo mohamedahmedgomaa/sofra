@@ -62,7 +62,7 @@ class AuthController extends Controller
         }
 //        $auth = auth()->guard('api')->validate($request->all());
 //        return responseJson(1, 'success', $auth);
-        $restaurant = Restaurant::where('email',$request->email)->first();
+        $restaurant = Restaurant::available()->where('email',$request->email)->first();
         if ($restaurant) {
             if (Hash::check($request->password, $restaurant->password)) {
                 return responseJson(1,'تم تسجيل الدخول بنجاح', [

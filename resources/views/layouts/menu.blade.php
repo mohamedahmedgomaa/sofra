@@ -1,6 +1,10 @@
+
+
 <!-- sidebar menu: : style can be found in sidebar.less -->
 <ul class="sidebar-menu" data-widget="tree">
-    {{--                <li class="header">MAIN NAVIGATION</li>--}}
+
+    {{--    @if(auth()->user()->hasRole('admin'))--}}
+
     <li class="treeview">
         <a href="#">
             <i class="fa fa-dashboard"></i> <span>{{trans('admin.dashboard')}}</span>
@@ -10,7 +14,9 @@
             <li><a href="{{url('admin/settings')}}"><i class="fa fa-circle-o"></i> {{trans('admin.settings')}}</a></li>
         </ul>
     </li>
+{{--    @endif--}}
 
+{{--    @if(auth()->user()->hasRole('laravel'))--}}
     <li class="treeview">
         <a href="#">
             <i class="fa fa-user"></i> <span>{{trans('admin.users')}}</span>
@@ -20,6 +26,7 @@
             <li><a href="{{url(route('user.create'))}}"><i class="fa fa-plus"></i> {{trans('admin.create')}}</a></li>
         </ul>
     </li>
+{{--    @endif--}}
 
     <li class="treeview">
         <a href="#">

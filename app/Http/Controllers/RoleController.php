@@ -88,7 +88,6 @@ class RoleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
         $records = Role::findOrFail($id);
         $records->update($request->all());
         $records->permissions()->sync($request->permissions_list);

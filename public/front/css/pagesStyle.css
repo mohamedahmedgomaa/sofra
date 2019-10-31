@@ -1,0 +1,848 @@
+
+.restuarent-header{
+    background-image: url(../images/download\ button-min.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position-x: center;
+    display: flex;
+    align-items: center;
+}
+.restuarent-header img{
+    height: 228px;
+    width: 228px;
+}
+.restuarent-header h1{
+    color: #fff;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.restuarent-header ul{
+    background-color: #fff;
+    width: 198px;
+    padding: 12px;
+    border-radius: 23px;
+    display: block;
+    margin-top: 28px;
+
+}
+.restuarent-header ul li i{
+    font-size: 23px;
+}
+.meal{
+    padding: 50px 0;
+}
+.meal .card{
+    border-radius: 18px !important;
+    margin-bottom:30px;
+}
+.meal .card .card-img-top{
+    border-radius: 18px !important;
+    height: 230px;
+}
+.meal .card .card-title{
+    color: #ec3554;
+    font-weight: bold;
+    margin-bottom: 22px;
+}
+.meal .card .card-text{
+ margin-top: 25px;
+}
+.meal .card .card-text span{
+  display: block;
+  margin-bottom: 15px;
+  color: #ec3554;
+}
+.meal .card .card-text span i{
+    color: #777272;
+    margin-left: 5px;
+}  
+.meal .card .card-link button{
+    display: block;
+    color: #fff;
+    width: 200px;
+    height: 50px;
+    border-radius: 11px;
+    font-size: 19px;
+    margin-top:27px;
+    background-image: url(../images/download\ button-min.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+/* start cart */
+.cart-order{
+    padding: 50px;
+    height: auto;
+    min-height: 600px;
+    background-image: url(../images/cart-bg.png);
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
+}
+.cart-order .card-or{
+    width: 50%;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 7px #cac8c8, -1px -1px 7px #cac8c8;
+    border-radius: 12px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+.cart-order .card-or .img-div{
+    width: 183px;
+    height: 152px;
+    float: right;
+}
+.cart-order .card-or .img-div img{
+    border-radius: 20px;
+}
+.cart-order .card-or .details{
+    float: right;
+}
+.cart-order .card-or .details > span{
+    display: block;
+    margin-bottom: 5px;
+}
+.cart-order .card-or .details select{
+    height: 27px;
+    background-color: #eae7e7;
+    border: none;
+}
+.cart-order .card-or .details button{
+    background-color: #ec3554;
+    color: #fff;
+    width: 128px;
+    border-radius: 20px;
+    margin-top: 15px;
+}
+/* end cart */
+
+/* start meal page */
+.meal-pop-up{
+    position: fixed;
+    background-color: #e0e0e0a6;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    top:0;
+    right: 0;
+    display: none;
+    
+}
+.meal-pop-up .pop-up-content{
+    background-color: #fff;
+    width: 33%;
+    height: 289px;
+    border-radius: 14px;
+    padding:36px;
+    position: relative;
+    margin:auto;
+    margin-top:150px;
+    
+}
+.meal-pop-up .pop-up-content a:hover{
+    text-decoration: none;
+}
+.meal-pop-up .pop-up-content h3{
+    color: #ec2566e3;
+    margin-bottom: 60px;
+}
+.meal-pop-up .pop-up-content span{
+    padding: 0 7px;
+    border: 2px solid;
+    border-radius: 50%;
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    cursor: pointer;
+}
+.meal-pop-up .pop-up-content button{
+    background-image:
+    linear-gradient(
+        #ec2566e3, #bb184d
+    );
+    color: #FFF;
+    display: block;
+    width: 200px;
+}
+.meal-pop-up .pop-up-content .f-btn{
+    margin-bottom: 20px ;
+}
+
+
+.about-meal{
+    padding: 50px 0;
+    min-height: 759px;
+    width: 100%;
+    background-image: url(../images/322549-P987TQ-635.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position-x: -312px;
+    background-position-y: -76px;
+}
+.about-meal .card{
+    width: 74%;
+    border-radius: 15px;
+    background: transparent;
+    border: none;
+}
+
+.about-meal .card .card-title{
+    font-weight: bold;
+}
+.about-meal .card .card-title,
+.about-meal .card .card-subtitle{
+    color:#37075d;
+    margin-bottom: 25px !important;
+}
+.about-meal .card .card-text{
+    margin: 27px 0;
+}
+.about-meal .card .card-text .main{
+    display: block;
+    font-size: 22px;
+    color:#37075d;
+}
+.about-meal .card .add-to-cart{
+    background-image: url(../images/Group\ 1039.png);
+    -webkit-background-size:100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-position-x: center;
+    height: 78px;
+    width: 290px;
+    display: block;
+    color: #fff;
+    font-size: 20px;
+}
+.about-meal .card .card-text .main img{
+    width: 25px;
+}
+.about-meal .meal-img{
+    height: 352px;
+    overflow: hidden;
+    border-radius: inherit;
+}
+.about-meal .meal-img img{
+    height: 500px;
+    border-radius: inherit;
+    position: relative;
+    bottom: 99px;
+}
+.testimonial{
+    margin-bottom: 50px;
+}
+.testimonial .title,
+.slider-show  .title{
+    border-right: 2px solid #1b1a1a;
+    padding: 8px 9px;
+    margin-bottom: 41px;
+}
+.testimonial .title h4,
+.slider-show  .title h4{
+    color: #ec2566e3;
+    font-weight: bold;
+}
+.testimonial .users-opinions{
+    margin-bottom: 40px;
+}
+.testimonial .opinion{
+    min-height: 164px;
+    height: auto;
+    background-color: #e6e6e6;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 20px;
+}
+.testimonial .opinion .name{
+    color: #f5748b;
+}
+.testimonial .opinion ul,
+.testimonial .add-opinion ul{
+    background-color: #fff;
+    width: 198px;
+    padding: 8px;
+    border-radius: 23px;
+    display:block;
+
+}
+.testimonial .opinion ul li i,
+.testimonial .add-opinion ul li i{
+    font-size: 20px;
+}
+.testimonial .opinion p{
+    color: #f5748b;
+    margin-top:20px;
+    font-size: 17px;
+}
+.testimonial .add-opinion ul{
+    
+    background-color: #e6e6e6 !important;
+}
+.testimonial .add-opinion form textarea{
+    height: 200px;
+    border-radius: 20px;
+    box-shadow: 2px 5px 5px #afacac4f, -2px 0px 5px #afacac4f;
+    border: n;
+    border: none;
+    background-color: #f9f9f9ba;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+.testimonial .add-opinion form button[type="submit"]{
+    margin-top: 25px;
+    display: block;
+    background-color: #d82951;
+    color: #fff;
+    width: 197px;
+    height: 46px;
+    border-radius: 27px;
+    font-size: 20px;
+}
+.slider-show .content{
+    padding:50px 0;
+    background-image: url(../images/Group\ 1038.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.slick-slide > div > div{
+    width: 90%  !important;
+    height: 286px;
+    border-radius: 40px;
+    position: relative;
+    cursor: pointer;
+}
+.meal-slider{
+    text-align:center;
+}
+.meal-slider img{
+
+    height:100%;
+    width :100%;
+    border-radius: inherit;
+    z-index: 1;
+    
+}
+.slick-slide > div > div .overlay{
+    height:100%;
+    width :100%;
+    border-radius: inherit;
+    position: absolute;
+    z-index: 2;
+    background-color: #000000b0;
+    color:#fff;
+    text-align: center;
+    padding-top: 98px;
+    font-size: 20px;
+    display: none;
+}
+.slick-slider{
+    direction:ltr;
+}
+.slick-arrow{
+    display: none !important;
+}
+.slick-dots li button:before{
+    font-size: 67px !important;
+    top: 14px !important;
+}
+@media(max-width:992px){
+    .about-meal{
+        background-position-x: -138px;
+        background-position-y: 58px;
+    }
+    .about-meal .meal-img{
+        height: 275px;
+    }
+    .about-meal .card .add-to-cart{
+        width: 271px;
+    }
+    .testimonial .opinion ul{
+        margin-top: 20px;
+    }
+    .slick-dots{
+        display: none !important;
+    }
+    .slick-arrow{
+        display: block !important;
+    }
+    .slick-prev{
+        top: 316px !important;
+        left: 126px !important;
+    }
+    .slick-next{
+        top: 316px !important;
+        right: 129px !important;
+    }
+    .slick-prev:before, .slick-next:before{
+        font-size: 28px;
+    }
+    .about-meal .card{
+        width: 96%;
+    }
+}
+/* end meal page */
+/* start user orders */
+.choose-bar{
+    background-color: #ec3554;
+    min-height: 68px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+.choose-bar span{
+    padding: 14px;
+    display: inline-block;
+}
+.choose-bar span.active-span,
+.choose-bar span:hover{
+    border-bottom: 3px solid #33114e;
+}
+.choose-bar a{
+    color:#FFF;
+}
+.choose-bar a:hover{
+    text-decoration: none;
+}
+.order{
+    padding:50px 0;
+    min-height: 500px;
+    height: auto;
+    
+}
+.order .prev-order,
+.order .current-order{
+    display: none;
+}
+.order .card-or{
+    background-color: #e2e2e2;
+    min-height: 200px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    width: 57%;
+    margin-bottom: 25px;
+}
+
+
+.order  .card-or .row{
+    align-items: center;
+}
+.order  .card-or img{
+  height: 175px;
+  border-radius: 50%;
+  border: 2px solid #ec3554;
+}
+
+.admin-or .card-or img{
+  height: 155px;
+  border-radius: 50%;
+  border: 2px solid #ec3554;
+  width: 85%;
+}
+.admin-or  .buttons{
+    display: flex;
+    justify-content: center;
+    margin-top:20px;
+}
+
+.admin-or  .buttons .btn{
+    width: 147px;
+}
+.admin-or  .new-order .buttons .btn{
+    width: 100px;
+    margin-left: 19px;
+
+}
+.admin-or  .new-order .buttons .btn:nth-child(1){
+    background-color: #ec3554;
+    border-color: #ec3554;
+}
+.admin-or  .new-order .buttons .btn:nth-child(3){
+    background-color:#37075d;
+    border-color:#37075d;
+}
+.admin-or .current-order .buttons .phone{
+    background-color: #ec3554;
+    color: #fff;
+    width: 147px;
+    text-align: center;
+    border-radius: 24px;
+    padding: 7px 0;
+    height: 38px;
+    margin-left: 16px;
+}
+
+.order .card-or h4{
+    color:#ec3554;
+}
+.order  .details > span{
+   display: block;
+}
+.order  .card-or button{
+    display: block;
+    width: 99px;
+    margin-bottom: 10px;
+    border-radius: 21px;
+}
+@media(max-width:767px){
+    .order  .card-or{
+       width:89%;
+   }
+}
+@media(max-width:991px){
+    
+   .order  .card-or .row{
+       text-align:center;
+   }
+   .order  .card-or .row > div{
+       display: flex;
+      justify-content: center;
+   }
+
+   .order  .card-or .row > div > div{
+       margin-bottom: 20px;
+
+   }
+}
+/* end orders */
+
+/* start user offers */
+.user-offers{
+    padding: 50px 0;
+    min-height: 400px;
+    height: auto;
+    background-color: #FFF;
+}
+.user-offers img{
+    height: 316px;
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.user-offers .title{
+    border-right: 2px solid #1b1a1a;
+    padding: 8px 9px;
+    margin-bottom: 41px;
+}
+.user-offers .title h4{
+    color: #ec2566e3;
+    font-weight: bold;
+}
+/* end offers */
+/* start contact us */
+.contact-us{
+    padding: 50px 0;
+    height: auto;
+}
+.contact-us .container{
+    display: flex;
+    justify-content: center;
+}
+.contact-us .content{
+    background-color: #ec3554;
+    padding: 40px 0;
+    text-align: center;
+    border-radius: 26px;
+    width: 76%;
+}
+.my-account .icon i{
+    font-size: 78px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+.contact-us .content h2{
+    color: #fff;
+    margin-bottom: 57px;
+}
+.contact-us .content form{
+    width: 70%;
+}
+.contact-us .content form input[type="text"],
+.contact-us .content form input[type="email"]{
+    margin-bottom: 14px;
+    height: 49px;
+    border-radius: 30px;
+}
+.contact-us .content form input[type="email"]{
+    text-align: right;
+}
+.contact-us .content form textarea{
+    height: 140px;
+    margin-bottom: 14px;
+}
+.contact-us .content form button[type="submit"]{
+    display: block;
+    margin-top: 45px;
+    background-color: #33114e;
+    color: #fff;
+    width: 191px;
+    height: 44px;
+    border-radius: 25px;
+}
+@media(max-width:991px){
+    .contact-us .content{
+        width: 93%;
+    }
+    .contact-us .content form{
+        width: 87%;
+    }
+}
+@media(max-width:768px){
+
+    .contact-us .content form input[type="text"],
+    .contact-us .content form input[type="email"]{
+        height: 37px;
+    }
+     
+    .my-account .icon i{
+        font-size: 58px;
+    }
+}
+/* start register seller */
+.register_seller{
+    height:auto;
+    padding: 70px 0;
+    background-image: url("../images/bg\ img.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position-x: -380px;
+}
+.register_seller .reg-content{
+    width: 70%;
+    padding-top: 120px;
+    padding-bottom: 50px;
+    box-shadow: 1px 1px 5px #d4d4d4, -1px 0px 5px #d4d4d4;
+    border-radius: 30px;
+    height: auto;
+    background-color: #fff;
+    margin-top: 83px;
+    position: relative;
+}
+.register_seller .reg-content .user-icon{
+   position: absolute;
+   background-color: #fff;
+   height: 100px;
+   width: 100px;
+   line-height: 112px;
+   text-align: center;
+   border-radius: 50%;
+   top: -45px;
+   border: 2px solid #250141;
+   right: 50%;
+    transform: translatex(50%);
+}
+.register_seller .reg-content .user-icon i{
+    font-size: 52px;
+}
+.register_seller .reg-content form{
+    width: 85%;
+    margin: auto;
+}
+.register_seller .reg-content form input ,
+.register_seller .reg-content form select{
+    margin-bottom: 20px;
+    height: 50px;
+    border-radius: 13px;
+    background-color: #f1f1f1;
+    border: none;
+    width: 100%;
+}
+.register_seller .reg-content form .img-ch-container,
+.register_seller .reg-content form  .choose-img,
+.add-product .add-product-content form .img-ch-container,
+.add-product .add-product-content form  .choose-img,
+.add-offer .add-offer-content form .img-ch-container,
+.add-offer .add-offer-content form  .choose-img{
+    width: 115px;
+    height: 65px;
+    border-radius: 7px;
+}
+.register_seller .reg-content form .img-ch-container,
+.add-product .add-product-content form .img-ch-container,
+.add-offer .add-offer-content form .img-ch-container{
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+}
+.add-product .add-product-content form .img-ch-container,
+.add-offer .add-offer-content form .img-ch-container{
+    display: block !important;
+    margin-bottom: 10px;
+
+}
+.register_seller .reg-content form  .choose-img,
+.add-product .add-product-content form  .choose-img,
+.add-offer .add-offer-content form  .choose-img{
+    z-index: 1;
+    cursor: pointer;
+    margin: 0;
+}
+.register_seller .reg-content form  .photo,
+.add-product .add-product-content form .photo,
+.add-offer .add-offer-content form .photo{
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    pointer-events:none;
+}
+.register_seller .reg-content form  .photo i,
+.add-product .add-product-content form .photo i,
+.add-offer .add-offer-content form .photo i{
+    font-size: 34px;
+    color: #c5c5c5;
+}
+.register_seller .reg-content form .role{
+    display: block;
+    margin-top: 20px;
+}
+.register_seller .reg-content form button[type="submit"]{
+    width: 263px;
+    height: 52px;
+    display: block;
+    border-radius: 23px;
+    background-color: #ec3554;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 30px;
+}
+    /*register_2*/
+.register_seller .reg-option {
+    margin-bottom: 74px;
+    margin-top: 12px;
+    padding: 0 20px;
+}   
+.register_seller .reg-option span{
+   display: inline-block;
+  
+}
+.register_seller .reg-option span a{
+    color: #ec3554;
+    font-size: 17px;
+}
+.register_seller .reg-option span:nth-child(1){
+    float: right;
+}
+.register_seller .reg-option span:nth-child(2){
+    float: left;
+}
+.register2 .reg-content form button,
+.register2 .reg-content form button[type="submit"]{
+    width: 230px;
+    height: 45px;
+    font-size: 18px;
+    display: block;
+    border-radius: 15px;
+    background-color: #bb184d;
+    color: #fff;
+    margin-top: 30px;
+}
+@media(max-width : 992px){
+    .register_seller .reg-content{
+        width:88%;
+    }
+    .register2 .reg-content form button,
+     .register2 .reg-content form button[type="submit"]{
+        width: 200px;
+    }
+}
+@media(max-width : 768px){
+    .register_seller .reg-option span{
+        display:block;
+        width: 100%;
+     }
+     .register_seller .reg-option {
+       margin-bottom: 83px;
+     }
+     .register_seller .reg-option span:nth-child(1){
+         margin-bottom: 5px;
+     }
+}
+/* end register seller */
+
+/* start add product - add offer */
+.add-product .add-product-content,
+.add-offer .add-offer-content {
+    padding: 30px 0;
+    width: 70%;
+    box-shadow: 1px 1px 5px #d4d4d4, -1px 0px 5px #d4d4d4;
+    border-radius: 30px;
+    height: auto;
+    background-color: #fff;
+    margin: 40px 0;
+    position: relative;
+   
+}
+.add-product .add-product-content form,
+.add-offer .add-offer-content form{
+    width: 85%;
+    margin: auto;
+}
+.add-product .add-product-content form input ,
+.add-product .add-product-content form textarea,
+.add-offer .add-offer-content form input,
+.add-offer .add-offer-content form textarea{
+    margin-bottom: 20px;
+    height: 50px;
+    border-radius: 13px;
+    background-color: #f1f1f1;
+    border: none;
+    width: 100%;
+}
+.add-product .add-product-content form textarea,
+.add-offer .add-offer-content form textarea{
+    height: 100px;
+}
+.add-product .add-product-content form button[type="submit"],
+.add-offer .add-offer-content form button[type="submit"]{
+    width: 230px;
+    height: 45px;
+    font-size: 18px;
+    display: block;
+    border-radius: 15px;
+    background-color: #bb184d;
+    color: #fff;
+    margin-top: 30px;
+}
+.add-offer .add-offer-content form .cal{
+    background-color: #f1f1f1;
+    margin-left: 10px;
+    cursor: pointer;
+    color: #420571;
+}
+.add-product .add-product-content form .img-product-label,
+.add-offer .add-offer-content form  .img-product-label{
+    margin-bottom: 25px;
+}
+@media(max-width:992px){
+    .add-product .add-product-content,
+    .add-offer .add-offer-content{
+        width:98%;
+    }
+}
+/* end  add product */

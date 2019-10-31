@@ -46,7 +46,7 @@ $cities = $city->pluck('name', 'id')->toArray();
                             <div class="col-md-3">
                                 {{-- 'soon' => 'قريبا', --}}
                                 <div class="form-group">
-                                    {!! Form::select('activated',['open' => 'مفتوح', 'closed' => 'مغلق'],request()->input('activated'),[
+                                    {!! Form::select('activated',['1' => 'مفعل', 'closed' => 'غير مفعل'],request()->input('activated'),[
                                     'class' => 'select2 form-control',
                                     'placeholder' => 'حالة المطعم'
                                     ]) !!}

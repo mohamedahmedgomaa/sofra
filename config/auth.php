@@ -41,13 +41,23 @@ return [
             'provider' => 'users',
         ],
 
+        'client' => [
+            'driver' => 'session',
+            'provider' => 'clients',
+        ],
+
         'api' => [
             'driver' => 'token',
             'provider' => 'clients',
         ],
 
-        'restaurant' => [
+        'restaurants' => [
             'driver' => 'token',
+            'provider' => 'restaurants',
+        ],
+
+        'restaurant' => [
+            'driver' => 'session',
             'provider' => 'restaurants',
         ],
     ],

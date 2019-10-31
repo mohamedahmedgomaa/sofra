@@ -71,7 +71,7 @@ Route::group(['namespace' => 'Api'], function () {
         Route::post('reset-password-restaurant', 'AuthController@resetPasswordRestaurant');
         Route::post('new-password-restaurant', 'AuthController@newPasswordRestaurant');
 
-        Route::group(['middleware' => 'auth:restaurant'], function () {
+        Route::group(['middleware' => 'auth:restaurants'], function () {
             Route::post('profile-edit-restaurant', 'AuthController@profileEditRestaurant');
             Route::get('show-profile-restaurant', 'AuthController@showProfileRestaurant');
             Route::get('show-product-restaurant', 'MainController@showProductRestaurant');

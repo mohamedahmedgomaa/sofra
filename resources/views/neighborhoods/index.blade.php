@@ -53,7 +53,7 @@
                                                 <tr id="removable{{$record->id}}">
                                                     <td>{{$loop->iteration}}</td>
                                                     <td>{{$record->name}}</td>
-                                                    <td>{{$record->city_id}}</td>
+                                                    <td>{{optional($record->city)->name}}</td>
                                                     <td class="text-center">
                                                         <a href="{{url(route('neighborhood.edit', $record->id))}}" class="btn btn-success btn-xs"><i class="fa fa-edit"></i></a>
                                                     </td>

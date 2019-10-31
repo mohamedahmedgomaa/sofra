@@ -144,34 +144,36 @@ class OrderController extends Controller
         }
 
         $order = $request->user()->orders()->find($request->order_id);
-        if ($order->state == 'pending' || $order->state == 'accepted') {
-            $orders = $order->update([
-                'state' => 'delivered' // تسليم
-            ]);
+        if($order) {
+            if ($order->state == 'pending' || $order->state == 'accepted') {
+                $orders = $order->update([
+                    'state' => 'delivered' // تسليم
+                ]);
 
-            $client = $order->client;
-            $notification = $client->notifications()->create([
-                'title' => 'تمت التاكيد على ان الطلب تم تسليمه',
-                'body' => 'تمت التاكيد من مطعم ' . $request->user()->name . 'على ان الطلب تم تسليم للعمليل ' . $client->name,
-                'order_id' => $request->order_id,
-            ]);
+                $client = $order->client;
+                $notification = $client->notifications()->create([
+                    'title' => 'تمت التاكيد على ان الطلب تم تسليمه',
+                    'body' => 'تمت التاكيد من مطعم ' . $request->user()->name . 'على ان الطلب تم تسليم للعمليل ' . $client->name,
+                    'order_id' => $request->order_id,
+                ]);
 //            $send = null;
-            $tokens = $client->tokens()->where('token', '!=', '')->pluck('token')->toArray();
-            if (count($tokens)) {
-                $title = $notification->title;
-                $body = $notification->body;
+                $tokens = $client->tokens()->where('token', '!=', '')->pluck('token')->toArray();
+                if (count($tokens)) {
+                    $title = $notification->title;
+                    $body = $notification->body;
+                    $data = [
+                        'order_id' => $order->name
+                    ];
+                    $send = notifyByFirebase($title, $body, $tokens, $data);
+
+                }
+
                 $data = [
-                    'order_id' => $order->name
+                    'order' => $order->fresh()->load('products')
                 ];
-                $send = notifyByFirebase($title, $body, $tokens, $data);
 
+                return responseJson(1, 'تم الارسال بنجاح', $data);
             }
-
-            $data = [
-                'order' => $order->fresh()->load('products')
-            ];
-
-            return responseJson(1, 'تم الارسال بنجاح', ['data' => $data, 'send' => $send]);
         }
         return responseJson(0, 'هذا الطلب لا يمكن الموافقه عليه');
     }

@@ -52,7 +52,7 @@
                     <div class="col-md-2">
                         <div class="form-group">
                             <label for="">&nbsp;</label>
-                            {!! Form::select('restaurant_id',$restaurant->get()->pluck('restaurant_details','id')->toArray(),request()->input('restaurant_id'),[
+                            {!! Form::select('restaurant_id',$restaurant->get()->pluck('name','id')->toArray(),request()->input('restaurant_id'),[
                                 'class' => 'form-control',
                                 'placeholder' => 'كل المطاعم'
                             ]) !!}
@@ -155,7 +155,7 @@
                                                         <td>{{$record->commission}}</td>
                                                         <td>{{$record->total}}</td>
                                                         <td>{{$record->address}}</td>
-                                                        <td>{{$record->paymentMethod->name}}</td>
+                                                        <td>{{optional($record->paymentMethod)->name}}</td>
                                                         <td class="text-center">
                                                             {!! Form::open([
                                                                 'action' => ['OrderController@show',$record->id],
